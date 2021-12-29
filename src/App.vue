@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="#2196F3" dark>
-        <v-app-bar-title> Vue + Vuetify</v-app-bar-title>
+        <v-app-bar-title> Testing</v-app-bar-title>
         <v-spacer></v-spacer>
           <v-btn
         v-for="(link, i) in links"
@@ -49,6 +49,7 @@
   </v-footer>
   </v-app>
 </template>
+
 
 <script>
 export default {
