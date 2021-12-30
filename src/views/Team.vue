@@ -1,15 +1,10 @@
-
-    <!-- <v-navigation-drawer
-      v-model="drawer"
-      app
-    >
-    </v-navigation-drawer> -->
 <template>
+  <div class="Team">
   <v-app id="inspire">
    <v-navigation-drawer
    v-model="drawer"
       app
-      class="deep-purple accent-4"
+      class="primary"
       dark
     
     >
@@ -31,35 +26,40 @@
 
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block>
-            Logout
-          </v-btn>
+          
         </div>
       </template>
     </v-navigation-drawer>
+    
+     <v-countainer class="my-5">
+      content
+    </v-countainer>
 
-    <v-app-bar app>
+           <v-app-bar app dark>
+      
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      
+      <v-toolbar-title>Team</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        v-for="(link,i) in links"
+        :key="i"
+        color="white"
+        text
+        rounded
+        class="my-2"
+        :to="link.path"
+      >
+        {{ link.label }}
+      </v-btn>
+      </v-app-bar>
 
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar>
-
-    <v-main>
-      <!--  -->
-    </v-main>
-  </v-app>
+    </v-app>
+  </div>
 </template>
-
 <script>
   export default {
     data: () => ({
-       drawer: null,
-        items: [
-          { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-          { title: 'Account', icon: 'mdi-account-box' },
-          { title: 'Admin', icon: 'mdi-gavel' },
-        ],
     }),
+
   }
-</script>
-  

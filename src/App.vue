@@ -18,7 +18,9 @@
       
 
       <v-main>
+        <v-content class="mx"> 
         <router-view></router-view>
+        </v-content>
       </v-main>
    <v-footer
     color="primary lighten-1"
@@ -64,12 +66,12 @@ export default {
       path:   "/",
     },
     {
-      label: "Login",
-      path: "/Login",
+      label: "Projects",
+      path: "/Projects",
     },
     {
-      label: "About",
-      path:   "/About"
+      label: "Dashboard",
+      path:   "/Dashboard"
     },
   ],
 
